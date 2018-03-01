@@ -4,11 +4,13 @@ namespace MyRunner
 {
     public partial class App : Application
     {
+        public static RunCalculator RunCalculator { get; } = new RunCalculator();
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MyRunnerPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

@@ -104,9 +104,42 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Runner3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3.png" />
+    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Runner2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Runner1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2.png" />
+    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1.png" />
+    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1%403x.png" />
+    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish.png" />
+    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish%402x.png" />
+    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\Runner1.imageset\" />
+    <Folder Include="Assets.xcassets\Runner3.imageset\" />
+    <Folder Include="Assets.xcassets\Runner2.imageset\" />
+    <Folder Include="Assets.xcassets\Runner1.imageset\" />
+    <Folder Include="Assets.xcassets\RunnerFinish.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -119,6 +152,15 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\runner1.png" />
+    <BundleResource Include="Resources\runner2.png" />
+    <BundleResource Include="Resources\runner3.png" />
+    <BundleResource Include="Resources\runnerFinish.png" />
+    <BundleResource Include="Resources\number1.png" />
+    <BundleResource Include="Resources\number2.png" />
+    <BundleResource Include="Resources\number3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.targets')" />
