@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyRunner.SecondRunPage">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image Grid.Row="3" Source="number2.png" HorizontalOptions="Start" VerticalOptions="End" />
+            <Label Grid.Row="0" Text="Run #2" Margin="0,20,0,0" />
+            <StackLayout Grid.Row="1" Orientation="Horizontal">
+                <Label Text="I just ran" />
+                <Entry Placeholder="1" Keyboard="Numeric" WidthRequest="40" x:Name="MilesEntry" />
+                <Label Text="Miles!" />
+            </StackLayout>
+            <StackLayout Grid.Row="2" Orientation="Horizontal">
+                <Label Text="It took me " />
+                <Entry Placeholder="1" Keyboard="Numeric" WidthRequest="40" x:Name="MinutesEntry" />
+                <Label Text="Minutes and " />
+                <Entry Placeholder="0" Keyboard="Numeric" WidthRequest="40" x:Name="SecondsEntry" />
+                <Label Text="Seconds." />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

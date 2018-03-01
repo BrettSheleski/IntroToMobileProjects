@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:MyRunnerDemo" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyRunnerDemo.MainPage">
+	<local:FirstRunPage Title="Run #1" Icon="Runner1.png" />
+    <local:SecondRunPage Title="Run #2" Icon="Runner2.png" />
+    <local:ThirdRunPage Title="Run #3" Icon="Runner3.png" />
+    <local:SummaryPage Title="Summary" Icon="RunnerFinish.png" />
+</TabbedPage>

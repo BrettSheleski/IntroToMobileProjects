@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyRunnerDemo.SummaryPage">
+    <Grid Margin="0, 20, 0, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Orientation="Horizontal">
+            <Label Text="You Ran " />
+            <Label Text="XX" x:Name="MilesLabel" />
+            <Label Text="Miles" />
+        </StackLayout>
+        <Label Grid.Row="1" Text="in" HorizontalTextAlignment="Center" />
+        <StackLayout Grid.Row="2" HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="XX" x:Name="HoursLabel" />
+            <Label Text="Hours, " />
+            <Label Text="XX" x:Name="MinutesLabel" />
+            <Label Text="Minutes and" />
+            <Label Text="XX" x:Name="SecondsLabel" />
+            <Label Text="Seconds" />
+        </StackLayout>
+        <StackLayout Grid.Row="3" HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="With an Average speed of" />
+            <Label Text="XX" x:Name="SpeedLabel" />
+            <Label Text="Miles per hour" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

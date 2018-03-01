@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA9DA8F9-6513-46EA-BB58-1952174E6398}</ProjectGuid>
+    <ProjectGuid>{46D17B2D-C697-46B7-B660-0C7F37F450EC}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UseMSBuildEngine>true</UseMSBuildEngine>
     <OutputType>Library</OutputType>
-    <RootNamespace>WeeklyWeather</RootNamespace>
-    <AssemblyName>WeeklyWeather</AssemblyName>
+    <RootNamespace>MyRunnerDemo</RootNamespace>
+    <AssemblyName>MyRunnerDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
   </PropertyGroup>
@@ -29,12 +29,24 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="WeeklyWeatherPage.xaml" />
-    <EmbeddedResource Include="WeatherForDayPage.xaml">
+    <EmbeddedResource Include="MyRunnerDemoPage.xaml" />
+    <EmbeddedResource Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="WeatherSummaryPage.xaml">
+    <EmbeddedResource Include="FirstRunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecondRunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThirdRunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SummaryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -43,17 +55,26 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WeeklyWeatherPage.xaml.cs">
-      <DependentUpon>WeeklyWeatherPage.xaml</DependentUpon>
+    <Compile Include="MyRunnerDemoPage.xaml.cs">
+      <DependentUpon>MyRunnerDemoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WeatherForDayPage.xaml.cs">
-      <DependentUpon>WeatherForDayPage.xaml</DependentUpon>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WeatherDetails.cs" />
-    <Compile Include="WeatherSummaryPage.xaml.cs">
-      <DependentUpon>WeatherSummaryPage.xaml</DependentUpon>
+    <Compile Include="FirstRunPage.xaml.cs">
+      <DependentUpon>FirstRunPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SecondRunPage.xaml.cs">
+      <DependentUpon>SecondRunPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdRunPage.xaml.cs">
+      <DependentUpon>ThirdRunPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryPage.xaml.cs">
+      <DependentUpon>SummaryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RunCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

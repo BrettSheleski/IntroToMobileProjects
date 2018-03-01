@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyRunner.ReviewPage">
+    <ScrollView>
+        <StackLayout Margin="0,20,0,0" x:Name="TheStackLayout">
+            <Label FontSize="28" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="You ran a total of " />
+                        <Span Text="10" x:Name="MilesSpan" FontAttributes="Bold" ForegroundColor="Maroon" FontSize="32" />
+                        <Span Text=" miles " FontAttributes="Bold" />
+                        <Span Text="in just " />
+                        <Span Text="15" x:Name="HoursSpan" FontAttributes="Bold" ForegroundColor="Maroon" FontSize="32" />
+                        <Span Text=" hours " FontAttributes="Bold" />
+                        <Span Text="15" x:Name="MinutesSpan" FontAttributes="Bold" ForegroundColor="Maroon" FontSize="32" />
+                        <Span Text=" minutes" FontAttributes="Bold" />
+                        <Span Text=" and " />
+                        <Span Text="30" x:Name="SecondsSpan" FontAttributes="Bold" ForegroundColor="Maroon" FontSize="32" />
+                        <Span Text=" seconds." FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="32" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="That averages to " />
+                        <Span Text="10" x:Name="MilesPerHourSpan" FontAttributes="Bold" ForegroundColor="Purple" FontSize="36" />
+                        <Span Text=" miles per hour!" FontAttributes="Bold" ForegroundColor="Purple" FontSize="36" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label x:Name="ToTheMoonLabel" FontSize="22" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="At that rate it would take you " />
+                        <Span Text="10" x:Name="ToMoonYearsSpan" />
+                        <Span Text=" years " />
+                        <Span Text="10" x:Name="ToMoonDaysSpan" />
+                        <Span Text=" days " />
+                        <Span Text="10" x:Name="ToMoonHoursSpan" />
+                        <Span Text=" hours " />
+                        <Span Text="10" x:Name="ToMoonMinutesSpan" />
+                        <Span Text=" minutes " />
+                        <Span Text="and " />
+                        <Span Text="10" x:Name="ToMoonSecondsSpan" />
+                        <Span Text=" seconds to get to" />
+                        <Span Text=" The Moon!" BackgroundColor="Black" ForegroundColor="White" FontSize="28" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
