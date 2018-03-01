@@ -26,6 +26,7 @@ namespace MyRunner
 
             App.RunCalculator.Run1Time = time;
             App.RunCalculator.Run1Distance = miles;
+
         }
     }
 }

@@ -7,9 +7,13 @@ namespace MyRunner
 {
     public partial class ReviewPage : ContentPage
     {
+        public static ReviewPage Current { get; private set; }
+
         public ReviewPage()
         {
             InitializeComponent();
+
+            Current = this;
         }
 
         const double MILES_TO_THE_MOON = 238900;
@@ -24,18 +28,13 @@ namespace MyRunner
 
             MilesPerHourSpan.Text = App.RunCalculator.AverageSpeed.ToString("0.##");
 
-
-
             if (App.RunCalculator.TotalTime > TimeSpan.Zero)
             {
                 ToTheMoonLabel.IsVisible = true;
 
-
-                FormattedString fs = new FormattedString();
-
                 // D = R * T --> T = D / R
 
-                double hoursToTheMoon = MILES_TO_THE_MOON / App.RunCalculator.TotalTime.TotalHours;
+                double hoursToTheMoon = MILES_TO_THE_MOON / App.RunCalculator.AverageSpeed;
 
                 // TimeSpans have an upper bound of time that they can represent
                 // It will throw an exception when trying to represent more than that.
@@ -62,11 +61,6 @@ namespace MyRunner
                     ToMoonSecondsSpan.Text = timeToTheMoon.Seconds.ToString();
                 }
 
-                foreach(Span span in ToTheMoonLabel.FormattedText.Spans){
-                    fs.Spans.Add(span);
-                }
-
-                ToTheMoonLabel.FormattedText = fs;
             }
             else
             {
@@ -74,11 +68,13 @@ namespace MyRunner
             }
         }
 
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
             UpdateDisplayText();
         }
+
     }
 }
