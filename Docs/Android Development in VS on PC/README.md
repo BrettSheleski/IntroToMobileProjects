@@ -80,15 +80,20 @@ Choose your desired device definition.
 
 ![](AS-AVDManager-DeviceDefinition.png)
 
-Select the desired version of Android to be used (download if necessary).
+Select the desired version of Android to be used.
 
 ![](AS-AVDManager-SelectSystemImage.png)
 
+(download if necessary)
 ![](AS-AVDManager-DownloadingSystemImage.png)
 
+Give your emulator a name
+![](AS-AVDManager-NameYourEmulator.png)
 
+Start your emulator
+![](AS-AVDManager-StartEmulator.png)
 
-
+![](AS-EmulatorStarting.png)
 
 ### Install Visual Studio
 
@@ -111,4 +116,24 @@ Clone the GitHub Git repository
 Once the clone operation completes, Visual Studio will open the cloned repository in the Solution Explorer tab.
 ![Screenshot](VSSolutionExplorerTab-Files.png)
 
-Double click the solution file to open the solution (originall created by Visual Studio for Mac)
+Double click the solution file to open the solution (originally created by Visual Studio for Mac)
+
+![](VSSolutionOpened.png)
+
+Choose the Android project as the Startup Project 
+
+![](VSChooseDroidStartupProject.png)
+
+Choose the Emulator created by the AVD Manager
+
+![](VSChooseAndroidEmulator.png)
+
+Start debugging.
+
+
+
+Presto!
+
+# Bonus
+
+## View the iOS Simulator from Visual Studio (for Windows)
