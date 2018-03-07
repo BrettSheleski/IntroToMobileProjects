@@ -199,7 +199,7 @@ Enter your username and password to connect to the Mac Virtual Machine with
 
 After Visual Studio connects to your Mac Virtual Machine you will see this.
 
-![](VSMacBuildServerConnected.png)
+![](VSMacBuildServerConnected.PNG)
 
 You can now close this window.
 
@@ -318,6 +318,6 @@ And we can start the iOS simulator demonstrating the changes.
 
 ![](VSMacSimulatorRunningWIthChanges.png)
 
-Viola!
+Voila!
 
 Now we can work in either Mac or PC and share code back and forth with a well known and industry-standard source control process.
