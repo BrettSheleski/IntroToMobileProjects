@@ -20,6 +20,6 @@ This will clone the entire repository to your computer.  This will have the enti
 
 ## Docs
 
-### [Android development in Visual Studio on PC](Docs/Android%20Development%20in%20VS%20on%20PC)
+### [Android development in Visual Studio on PC](Docs/Android%20Development%20in%20VS%20on%20PC/README.md)
 Guide to creating a project using the Mac Virtual Machine then opening the project in Visual Studio on a PC.  
 This also demonstrates using Git as a Source Control Manager and using GitHub.
