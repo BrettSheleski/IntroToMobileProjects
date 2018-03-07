@@ -13,9 +13,9 @@ Make sure to select add Git Repository.
 
 Once done, make sure to commit all changes to your local Git repository.
 
-![Screenshot 2](VSMacCommitChangesToGit.png)
+![Screenshot 2](VSMacCommitChangesToGit.PNG)
 
-![Screenshot 3](VSMacCommitChangesToGitDialog.png)
+![Screenshot 3](VSMacCommitChangesToGitDialog.PNG)
 After committing the changes, a "snapshot" will be created saving the current state of all tracked files to the local Git repository.
 
 
@@ -24,27 +24,27 @@ After committing the changes, a "snapshot" will be created saving the current st
 
 ![Screenshot 4](GitHubNewRepoDropdown.png)
 
-![Screenshot 5](GitHubNewRepoComplete.png)
+![Screenshot 5](GitHubNewRepoComplete.PNG)
 
-![Screenshot 6](GitHubNewRepoPage.png)
+![Screenshot 6](GitHubNewRepoPage.PNG)
 Note the HTTPS URL for your Git Repository
 
 Add your GitHub repository as a remote for your local Git repository.
-![Screenshot 7](VSMacManageBranchesRemotes.png)
+![Screenshot 7](VSMacManageBranchesRemotes.PNG)
 
-![Screenshot 8](VSMacAddRemoteOrigin.png)
+![Screenshot 8](VSMacAddRemoteOrigin.PNG)
 
 Push your commits from your local Git repository to your GitHub repository.
 
-![Screenshot 9](VSMacGitPushChanges.png)
+![Screenshot 9](VSMacGitPushChanges.PNG)
 
-![Screenshot 10](VSMacGitPushChangesDialog.png)
+![Screenshot 10](VSMacGitPushChangesDialog.PNG)
 
 Enter your GitHUb credentials
-![Screnshot 11](VSMacGitPushChangesCredentials.png)
+![Screnshot 11](VSMacGitPushChangesCredentials.PNG)
 
 View all files on GitHub in browser.
-![Screenshot 12](GitHubViewRepoWithPushedChanges.png)
+![Screenshot 12](GitHubViewRepoWithPushedChanges.PNG)
 
 ## On Windows PC
 
