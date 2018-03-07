@@ -9,7 +9,7 @@ Go to https://git-scm.com/downloads and download the latest.  Install it once do
 ### Create new App in Visual Studio for Mac
 Make sure to select add Git Repository.
 
-![Screenshot](VSMacCreateProjectWithGit.png)
+![Screenshot](VSMacCreateProjectWithGit.PNG)
 
 Once done, make sure to commit all changes to your local Git repository.
 
