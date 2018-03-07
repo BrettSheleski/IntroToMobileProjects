@@ -58,13 +58,57 @@ This will download the Android SDK and most other required software.
 
 Create a new project in Android Studio.  This actual project will not be needed, just click through the prompts to get to Android Studio.
 
+Android Studio may display errors in the bottom that you may be missing necessary components.  Click the links it suggests to resolve any issues.
 
+Open the Android SDK Manager
+
+![](AS-OpenSDKManager.png)
+
+Make sure to have Android SDK Tools version 26 installed.
+
+![](AS-SDKManager-SDKTools.png)
+
+Create desired emulator by opening the Android AVD Manager
+
+![](AS-AVDManager-Menu.png)
+
+Click the Create Virtual Device button.
+
+![](AS-AVDManager.png)
+
+Choose your desired device definition.
+
+![](AS-AVDManager-DeviceDefinition.png)
+
+Select the desired version of Android to be used (download if necessary).
+
+![](AS-AVDManager-SelectSystemImage.png)
+
+![](AS-AVDManager-DownloadingSystemImage.png)
 
 
 
 
 
 ### Install Visual Studio
+
 Make sure to select Mobile App Development feature set during installation.
+![Screenshot 13](VSInstallerWorkloadsMobileAppDevelopment.png)
+
+If this is not selected, you may modify your installation of Visual Studio by opening the Visual Studio 2017 Installer app.
 
 ### Open Visual Studio
+
+Open Viual Studio
+![Screenshot 14](VSOpened.png)
+
+Go to the Team Explorer tab
+![SCreenshot 15](VSTeamExplorerTab.png)
+
+Clone the GitHub Git repository
+![Screenshot 16](VSTeamExplorerTabCloneRepo.png)
+
+Once the clone operation completes, Visual Studio will open the cloned repository in the Solution Explorer tab.
+![Screenshot](VSSolutionExplorerTab-Files.png)
+
+Double click the solution file to open the solution (originall created by Visual Studio for Mac)
