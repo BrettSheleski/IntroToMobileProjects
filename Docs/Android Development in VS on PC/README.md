@@ -229,3 +229,95 @@ You may interact with the iOS Simulator on the PC.  Doing so will send any inter
 
 You may make changes to the app in Visual Studio (on PC) and commit any changes to the Git repository on your PC.
 
+![](VSChangeToXamlFile.png)
+
+Any additional changes may also be done as well.
+
+Go to the Team Explorer tab in Visual Studio.
+![](VSTeamExplorerTabWithOpenSolution.png)
+
+Click the `Changes` button
+
+Visual Studio will show all changes* made to any file in the Git repository.
+![](VSTeamExplorerChanges.png)
+
+```
+Changes to files can be ignored automatically 
+by editing the .gitignore file.  Therefore not every file
+containing modifications may be listed.
+
+(more on this later)
+```
+
+Right click on any files/folders you wish to commit to the Git repository and select `Stage`.
+
+(Only *Staged* changes will be committed.  You must manually add the files you wish to commit by selecting them to be staged)
+
+Enter a comment describing *why* changes were made (not *what* changes were made, that can be seen quite simply by viewing the file.)
+
+![](VSTeamExplorerStagedChanges.png)
+
+Click `Commit Staged`
+
+![](VSTeamExplorerChangesCommitted.png)
+
+Note that the changes were only committed to your local Git repository.  Nothing has been shared to any other repository (eg: GitHub) yet.
+
+To `push` your local commits to a remote repository, click Sync from the Team Explorer tab.
+![](VSTeamExplorerTabSyncButton.png)
+
+From here you can `pull` changes from the remote repository or `push` your local commits to the remote repository.
+
+- A `pull` will retrieve any commits from the remote repository and merge them into your local repository.  Often times this will create an additional `merge-commit` automatically.  However sometimes you may have to manually merge the changes into your local repository if there are conflicting changes.
+
+- A `push` will attempt to submit your local commits to the remote repository.  This may fail if the remote repository has additional commits that you have not merged into your local repository yet.
+
+Push your changes to the remote repository.
+
+![](VSTeamExplorerPush.png)
+
+You may be prompted to enter your GitHub credentials:
+
+![](VSTeamExplorerPushGithubCredentials.png)
+
+When completed you will see a message telling you so.
+
+### Now lets retrieve the changes from the Mac Virtual Machine
+
+The Mac's local Git repository does not yet contain the changes that were made in the PC environment.  To retrieve those changes first open the Solution in Visual Studio for Mac (if not opened already).
+
+Select Version Control --> Update Solution
+
+![](VSMacVersionControlUpdateSolution.png)
+
+*WARNING!!!* This process will do a Git `stash` operation without notice.  
+
+A `stash` operation will wipe out any un-staged changes you may have made.  This is the exact gotcha that caused me to lose all changes made for a demo app for Week 6.  Live and learn.
+
+Make sure to have any changes you wish to preserve at least staged prior to doing this operation from Visual Studio for Mac.
+
+Alternatively, you can perform the Git `pull` operation manually from the terminal
+
+```
+# Change directory to the directory containing my Git repository
+cd Projects/DemoGitApp/
+
+# Tell Git to pull all changes from the remote repository
+git pull
+```
+
+![](MacGitPull.png)
+
+Doing a manual Git `pull` does not cause an automatic (and unprompted) Git `stash` operation.
+
+Now if we open any files we modified, committed, and pushed from Visual Studio (on PC), we shall see them in Visual Studio for Mac as well.
+
+![](VSMacShowModifiedXamlFile.png)
+
+And we can start the iOS simulator demonstrating the changes.
+
+![](VSMacSimulatorRunningWIthChanges.png)
+
+Viola!
+
+Now we can work in either Mac or PC and share code back and forth with a well known and industry-standard source control process.
