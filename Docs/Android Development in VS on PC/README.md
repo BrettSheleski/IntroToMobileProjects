@@ -130,10 +130,102 @@ Choose the Emulator created by the AVD Manager
 
 Start debugging.
 
-
+![](VSAndroidEmulatorRunningApp.png)
 
 Presto!
 
 # Bonus
 
 ## View the iOS Simulator from Visual Studio (for Windows)
+
+```
+This process will only work while you are on campus at FVTC 
+as the Mac Virtual Machines are not accessible via the internet.
+
+If you have your own Mac on your home network, however, the same
+process may be done at home.
+```
+
+
+### Enable SSH Connections to your Mac Virtual Machine
+Open System Preferences for your Mac Virtual Machine
+
+![](Mac-ApplicationsSystemPreferences.png)
+
+![](Mac-SystemSettings.png)
+
+Select the Sharing icon
+![](Mac-SystemSettings-Sharing.png)
+
+Enable the Remote Login service and allow the desired users.
+![](Mac-SystemSettings-Sharing-RemoteLogin.png)
+
+You will need to know the Mac's IP address in order to connect to it.
+
+In System Preferences
+
+![](Mac-SystemSettings.png)
+
+ click the Network icon.
+
+ ![](Mac-SystemSettings-Network.png)
+
+ Note your Mac Virtual Machine's IP address (10.4.XXX.XXX)
+
+
+### Connect to your Mac Virtual Machine from Visual Studio on PC
+
+Open your project in Visual Studio (on PC).
+
+Select the iOS project as your startup project.
+
+![](VSChooseiOSStartupProject.png)
+
+Click the Simulator button to begin debugging.
+
+![](VSClickSimulatorButton.png)
+
+Since you have not connected to your Mac Virtual Machine yet, Visual Studio will prompt you to enter your server information.
+
+![](VSChooseMacBuildServer.png)
+
+Click the `Add Server...` button and enter the IP address of your Mac Virtual Machine.
+
+![](VSAddMacBuildServer.png)
+
+Enter your username and password to connect to the Mac Virtual Machine with
+
+![](VSMacServerCredentials.png)
+
+After Visual Studio connects to your Mac Virtual Machine you will see this.
+
+![](VSMacBuildServerConnected.png)
+
+You can now close this window.
+
+Now in the debug toolbar, you will be able to choose any of the iOS Simulator hardware profiles your Mac Virtual Machine has installed.
+
+![](VSSelectIOSSimulatorHardware.png)
+
+After selecting your desired hardware/iOS version, you can click to start debugging.
+
+If you watch your Mac Virtual Machine during this process, you will notice the iOS Simulator start and display your App.
+
+Screenshot from Mac:
+
+![](Mac-SimulatorRunningApp.png)
+
+On the Windows PC, a screen displaying the iOS Simulator will also run.
+
+![](VSiOSSimulatorRunningApp.png)
+
+Hooray!
+
+It is important to realize that the actual app is running on the iOS Simulator on the Mac Virtual Machine, only the display is shown remotely on the Simulator running on the PC.
+
+You may interact with the iOS Simulator on the PC.  Doing so will send any interactions to the Simulator running on the Mac and display the results.
+
+## Making changes to app in Visual Studio (on PC) and using Git
+
+You may make changes to the app in Visual Studio (on PC) and commit any changes to the Git repository on your PC.
+
