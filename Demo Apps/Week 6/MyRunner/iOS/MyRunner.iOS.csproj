@@ -102,38 +102,102 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
-    <ImageAsset Include="Assets.xcassets\Runner3.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3.png" />
-    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3%402x.png" />
-    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3%403x.png" />
-    <ImageAsset Include="Assets.xcassets\Runner2.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Runner1.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2.png" />
-    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2%402x.png" />
-    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2%403x.png" />
-    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1.png" />
-    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1%402x.png" />
-    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1%403x.png" />
-    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish.png" />
-    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish%402x.png" />
-    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtwork%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner3.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner3.imageset\runner3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner2.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner1.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner2.imageset\runner2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Runner1.imageset\runner1%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\RunnerFinish.imageset\runnerFinish%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Notification.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-83.5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

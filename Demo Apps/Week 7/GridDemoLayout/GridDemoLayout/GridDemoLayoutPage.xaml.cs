@@ -20,5 +20,9 @@ namespace GridDemoLayout
             await Navigation.PushAsync(new FlagPageCS());
         }
 
+        async void HandleTmnt_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Tmnt());
+        }
     }
 }

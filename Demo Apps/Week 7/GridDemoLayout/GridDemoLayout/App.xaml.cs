@@ -10,15 +10,10 @@ namespace GridDemoLayout
 
             Page firstPage = new GridDemoLayoutPage();
 
-            if (Device.RuntimePlatform == Device.iOS){
+            NavigationPage navPage = new NavigationPage(firstPage);
 
-                NavigationPage navPage = new NavigationPage(firstPage);
+            MainPage = navPage;
 
-                MainPage = navPage;
-            }
-            else{
-                MainPage = firstPage;    
-            }
         }
 
         protected override void OnStart()
