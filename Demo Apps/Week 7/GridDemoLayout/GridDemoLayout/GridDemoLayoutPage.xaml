@@ -4,5 +4,6 @@
         <Button Text="Show Flag (XAML)" Clicked="HandleShowFlagXaml_Clicked" />
         <Button Text="Show Flag (C#)" Clicked="HandleShowFlagCS_Clicked" />
         <Button Text="TMNT" Clicked="HandleTmnt_Clicked" />
+        <Button Text="Persistence Demo" Clicked="HandlePersistence_Clicked" />
     </StackLayout>
 </ContentPage>

@@ -34,6 +34,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersistenceDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -51,6 +55,9 @@
       <DependentUpon>Tmnt.xaml</DependentUpon>
     </Compile>
     <Compile Include="TurtleInfo.cs" />
+    <Compile Include="PersistenceDemo.xaml.cs">
+      <DependentUpon>PersistenceDemo.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.CarouselView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

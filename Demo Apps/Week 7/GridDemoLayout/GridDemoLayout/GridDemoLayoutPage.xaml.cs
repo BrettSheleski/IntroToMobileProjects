@@ -24,5 +24,9 @@ namespace GridDemoLayout
         {
             await Navigation.PushAsync(new Tmnt());
         }
+
+        async void HandlePersistence_Clicked(object sender, EventArgs e){
+            await Navigation.PushAsync(new PersistenceDemo());
+        }
     }
 }
