@@ -22,7 +22,11 @@ namespace UndehydrationCalculator.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
+            Xamarin.Forms.DependencyService.Register<AndroidAudioPlayer>();
+
             LoadApplication(new App());
+
+            AudioManager.Initializer.Initialize();
         }
     }
 }

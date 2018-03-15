@@ -14,6 +14,8 @@ namespace UndehydrationCalculator.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+            Xamarin.Forms.DependencyService.Register<IosAudioPlayer>();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
