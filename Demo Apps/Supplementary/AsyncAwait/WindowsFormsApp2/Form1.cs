@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -187,6 +188,22 @@ namespace WindowsFormsApp2
             _cancellationTokenSource.Cancel();
 
             TheProgressBar.Value = 0;
+        }
+
+        public async Task<string> GetRssFeedStringAsync()
+        {
+            using (var client = new WebClient())
+            {
+                Uri uri = new Uri("http://rss.cnn.com/rss/cnn_topstories.rss");
+                return await client.DownloadStringTaskAsync(uri);
+            }
+        }
+
+        private async void button5_Click(object sender, EventArgs e)
+        {
+            string downloadedXml = await GetRssFeedStringAsync();
+
+            MessageBox.Show(downloadedXml);
         }
     }
 }
