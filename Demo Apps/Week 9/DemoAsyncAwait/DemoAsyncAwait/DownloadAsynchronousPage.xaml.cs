@@ -28,7 +28,7 @@ namespace DemoAsyncAwait
 
             using (HttpClient client = new HttpClient())
             {
-                await client.GetStreamAsync(DOWNLOAD_URL_100MB);
+                Byte[] downloadedBytes = await client.GetByteArrayAsync(DOWNLOAD_URL_100MB);
             }
 
 
