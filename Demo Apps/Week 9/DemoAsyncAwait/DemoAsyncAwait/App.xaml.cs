@@ -8,7 +8,7 @@ namespace DemoAsyncAwait
         {
             InitializeComponent();
 
-            MainPage = new DemoAsyncAwaitPage();
+            MainPage = new NavigationPage(new DemoAsyncAwaitPage());
         }
 
         protected override void OnStart()

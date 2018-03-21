@@ -8,5 +8,15 @@ namespace DemoAsyncAwait
         {
             InitializeComponent();
         }
+
+        private void SynchronousButton_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new DownloadSynchronousPage());
+        }
+
+        private void AsynchronousButton_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new DownloadAsynchronousPage());
+        }
     }
 }

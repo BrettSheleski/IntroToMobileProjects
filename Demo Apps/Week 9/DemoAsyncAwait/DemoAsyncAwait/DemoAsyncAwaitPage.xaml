@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:DemoAsyncAwait" x:Class="DemoAsyncAwait.DemoAsyncAwaitPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Button Text="Synchronous Demo" x:Name="SynchronousButton" Clicked="SynchronousButton_Clicked" />
+    <Button Text="Asynchronous Demo" x:Name="AsynchronousButton" Clicked="AsynchronousButton_Clicked" />
 </ContentPage>

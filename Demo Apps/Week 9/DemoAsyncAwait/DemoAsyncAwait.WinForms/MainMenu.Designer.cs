@@ -31,6 +31,7 @@
             this.DownloadSynchronousButton = new System.Windows.Forms.Button();
             this.DownloadAsynchronousButton = new System.Windows.Forms.Button();
             this.DownloadAsynchronousWithTasksButton = new System.Windows.Forms.Button();
+            this.AdvancedAsyncTasks = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DownloadSynchronousButton
@@ -63,11 +64,22 @@
             this.DownloadAsynchronousWithTasksButton.UseVisualStyleBackColor = true;
             this.DownloadAsynchronousWithTasksButton.Click += new System.EventHandler(this.DownloadAsynchronousWithTasksButton_Click);
             // 
+            // AdvancedAsyncTasks
+            // 
+            this.AdvancedAsyncTasks.Location = new System.Drawing.Point(12, 279);
+            this.AdvancedAsyncTasks.Name = "AdvancedAsyncTasks";
+            this.AdvancedAsyncTasks.Size = new System.Drawing.Size(224, 49);
+            this.AdvancedAsyncTasks.TabIndex = 0;
+            this.AdvancedAsyncTasks.Text = "Advanced Async Tasks";
+            this.AdvancedAsyncTasks.UseVisualStyleBackColor = true;
+            this.AdvancedAsyncTasks.Click += new System.EventHandler(this.AdvancedAsyncTasks_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(248, 380);
+            this.Controls.Add(this.AdvancedAsyncTasks);
             this.Controls.Add(this.DownloadAsynchronousWithTasksButton);
             this.Controls.Add(this.DownloadAsynchronousButton);
             this.Controls.Add(this.DownloadSynchronousButton);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button DownloadSynchronousButton;
         private System.Windows.Forms.Button DownloadAsynchronousButton;
         private System.Windows.Forms.Button DownloadAsynchronousWithTasksButton;
+        private System.Windows.Forms.Button AdvancedAsyncTasks;
     }
 }
 

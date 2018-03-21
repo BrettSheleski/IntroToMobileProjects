@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DownloadAsynchronousTaskAdvancedWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadAsynchronousTaskAdvancedWindow.Designer.cs">
+      <DependentUpon>DownloadAsynchronousTaskAdvancedWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="DownloadAsynchronousTaskWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DownloadAsynchronousTaskAdvancedWindow.resx">
+      <DependentUpon>DownloadAsynchronousTaskAdvancedWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownloadAsynchronousTaskWindow.resx">
       <DependentUpon>DownloadAsynchronousTaskWindow.cs</DependentUpon>
     </EmbeddedResource>

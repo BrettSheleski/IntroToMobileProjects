@@ -32,6 +32,11 @@ namespace DemoAsyncAwait.WinForms
             ShowWindow<DownloadAsynchronousTaskWindow>();
         }
 
+        private void AdvancedAsyncTasks_Click(object sender, EventArgs e)
+        {
+            ShowWindow<DownloadAsynchronousTaskAdvancedWindow>();
+        }
+
         public void ShowWindow<T>() where T : Form, new()
         {
             var window = new T();
