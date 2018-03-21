@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,16 +18,17 @@ namespace DemoAsyncAwait
             InitializeComponent();
         }
 
+        const string DOWNLOAD_URL_100MB = "http://ipv4.download.thinkbroadband.com/100MB.zip";
+
         private void Button_Clicked(object sender, EventArgs e)
         {
 
             MessageLabel.Text = "Downloading...";
 
-
-            // since downloading sychronously is not easy, lets fake it...
-            TimeSpan sleepTime = TimeSpan.FromSeconds(20);
-            Task.Delay(sleepTime).Wait();
-
+            using (HttpClient client = new HttpClient())
+            {
+                client.GetByteArrayAsync(DOWNLOAD_URL_100MB).Wait();
+            }
 
 
             MessageLabel.Text = "Done Downloading!";

@@ -41,7 +41,6 @@
     <Compile Include="DownloadAsynchronousPage.xaml.cs">
       <DependentUpon>DownloadAsynchronousPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DownloadHelper.cs" />
     <Compile Include="DownloadSynchronousPage.xaml.cs">
       <DependentUpon>DownloadSynchronousPage.xaml</DependentUpon>
     </Compile>
