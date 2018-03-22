@@ -12,19 +12,10 @@ namespace FeedReader.FeedListMvvm
     {
 
         public FeedReader.Core.Models.FeedListMvvmModel Model { get; } = new Core.Models.FeedListMvvmModel();
-        public string Title
-        {
-            get => _title; set
-            {
-                _title = value;
-                OnPropertyChanged();
-            }
-        }
 
-        private string _title;
         public ViewModel()
         {
-            Title = "THIS IS THE TITLE";
+            
         }
 
 

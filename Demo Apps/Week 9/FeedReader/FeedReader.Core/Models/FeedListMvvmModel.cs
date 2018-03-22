@@ -22,6 +22,18 @@ namespace FeedReader.Core.Models
             }
         }
 
+        private string _title;
+
+        public string Title
+        {
+            get { return _title; }
+            set
+            {
+                _title = value;
+                OnPropertyChanged();
+            }
+        }
+
         public async Task InitializeAsync()
         {
             await DownloadRssFeedAsync();
@@ -44,17 +56,28 @@ namespace FeedReader.Core.Models
 
             XDocument rssDoc = XDocument.Parse(rssXml);
             XNamespace ns = rssDoc.Root.GetDefaultNamespace();
-            
-            foreach(var articleElement in rssDoc.Root.Elements(ns + "channel").SelectMany(x => x.Elements(ns + "item")))
+
+            ArticleModel article;
+
+            this.Title = rssDoc.Root.Elements(ns + "channel").SelectMany(c => c.Elements(ns + "title")).Select(x => x.Value).FirstOrDefault();
+
+            foreach (var articleElement in rssDoc.Root.Elements(ns + "channel").SelectMany(x => x.Elements(ns + "item")))
             {
-                Articles.Add(new ArticleModel
+                article = new ArticleModel
                 {
                     Title = articleElement.Elements(ns + "title").Select(x => x.Value).FirstOrDefault(),
                     Url = articleElement.Elements(ns + "link").Select(x => x.Value).FirstOrDefault(),
                     UniqueId = articleElement.Elements(ns + "guid").Select(x => x.Value).FirstOrDefault(),
-                    PublishDate = articleElement.Elements(ns + "pubDate").Select(x => x.Value).Select(str => { DateTime dt; DateTime.TryParse(str, out dt); return dt; } ).FirstOrDefault(),
+                    PublishDate = articleElement.Elements(ns + "pubDate").Select(x => x.Value).Select(str => { DateTime dt; DateTime.TryParse(str, out dt); return dt; }).FirstOrDefault(),
                     Description = articleElement.Elements(ns + "description").Select(x => x.Value).FirstOrDefault(),
-                });
+                };
+
+                if (!string.IsNullOrWhiteSpace(article.Title))
+                {
+                    // Evidently CNN likes to add empty ad-like items to the RSS feed
+
+                    Articles.Add(article);
+                }
             }
 
             IsDownloading = false;
@@ -80,7 +103,8 @@ namespace FeedReader.Core.Models
             public string Url
             {
                 get => _url;
-                set {
+                set
+                {
                     _url = value;
                     OnPropertyChanged();
                 }
