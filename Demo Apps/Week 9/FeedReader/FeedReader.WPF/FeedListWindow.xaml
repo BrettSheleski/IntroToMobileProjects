@@ -1,0 +1,31 @@
+﻿<Window x:Class="FeedReader.WPF.FeedListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FeedReader.WPF"
+        mc:Ignorable="d"
+        Title="FeedListWindow" Height="450" Width="800">
+    <Grid>
+        <ListView ItemsSource="{Binding Model.Articles}" HorizontalContentAlignment="Stretch" x:Name="ArticleList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock HorizontalAlignment="Stretch">
+                            <Hyperlink NavigateUri="{Binding Url}" Command="{Binding Path=DataContext.OpenArticleCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" CommandParameter="{Binding Url}" >
+                                <Hyperlink.Inlines>
+                                    <Run Text="{Binding Title}" />
+                                </Hyperlink.Inlines>
+                            </Hyperlink>
+                        </TextBlock>
+                        <WebBrowser HorizontalAlignment="Stretch" Grid.Row="1" local:BrowserBehavior.Html="{Binding Description}" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>
