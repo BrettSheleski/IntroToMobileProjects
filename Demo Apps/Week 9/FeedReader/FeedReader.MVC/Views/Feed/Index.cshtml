@@ -1,0 +1,18 @@
+﻿@model FeedReader.MVC.Models.FeedIndexViewModel
+
+<h1>@Html.DisplayFor(m => m.Model.Title)</h1>
+<ul class="list-unstyled">
+    @foreach(var article in Model.Model.Articles)
+    {
+        <li>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">@Html.DisplayFor(m => article.Title) <a href="@(article.Url)" target="_blank"><span class="glyphicon glyphicon-link"></span></a></h2>
+                </div>
+                <div class="panel-body">
+                    @Html.Raw(article.Description)
+                </div>
+            </div>
+        </li>
+    }
+</ul>

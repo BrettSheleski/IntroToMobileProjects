@@ -10,7 +10,7 @@ namespace FeedReader.Core.Models
 {
     public class FeedListMvvmModel : Model
     {
-        const string RSS_FEED_URL = "http://rss.cnn.com/rss/cnn_tech.rss";
+        const string RSS_FEED_URL = "http://rss.cnn.com/rss/cnn_topstories.rss";
 
         public bool IsDownloading
         {
