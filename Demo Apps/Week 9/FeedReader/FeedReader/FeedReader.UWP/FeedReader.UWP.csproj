@@ -149,9 +149,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1"/>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\FeedReader.Core\FeedReader.Core.csproj">
+      <Project>{e8602bd2-7af1-453d-af75-acef6c910d43}</Project>
+      <Name>FeedReader.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FeedReader\FeedReader.csproj">
       <Project>{7D97E947-6729-48B4-BAC0-3BA8C48D4561}</Project>
       <Name>FeedReader</Name>
