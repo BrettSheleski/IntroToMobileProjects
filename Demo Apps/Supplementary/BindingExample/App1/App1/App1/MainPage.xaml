@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ListView ItemsSource="{Binding Players}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Entry Text="{Binding Name}" />
+
+                            <Button Grid.Row="1" Grid.Column="1" Text="+" Command="{Binding AddHitPointsCommand}"  />
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding HitPoints}" />
+                            <Button Grid.Row="1" Grid.Column="3" Text="-" Command="{Binding RemoveHitPointsCommand}"/>
+
+                            <Button Grid.Row="2" Grid.Column="1" Text="+" Command="{Binding AddArmorCommand}"/>
+                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding Armor}" />
+                            <Button Grid.Row="2" Grid.Column="3" Text="-" Command="{Binding RemoveArmorCommand}"/>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="1" Text="Add Player" Command="{Binding AddPlayerCommand}" />
+    </Grid>
+    
+
+</ContentPage>
+
