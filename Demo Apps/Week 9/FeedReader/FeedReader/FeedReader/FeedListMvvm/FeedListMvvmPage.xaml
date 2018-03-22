@@ -3,18 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FeedReader"
              x:Class="FeedReader.FeedListMvvm.FeedListMvvmPage">
-    <ListView BindingContext="{Binding Model.Articles}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="100" />
-                    </Grid.RowDefinitions>
-                    <local:HyperlinkLabel Uri="{Binding Url}" Text="{Binding Title}" />
-                    <Label Text="{Binding Description}" />
-                </Grid>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Text="{Binding Title}" FontSize="32" VerticalOptions="Center" HorizontalOptions="Center" Margin="10" />
+        <ListView ItemsSource="{Binding Model.Articles}" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Label Text="TEST" />
+                        <!--<local:HyperlinkLabel Uri="{Binding Url}" Text="{Binding Title}" />
+                        <Label Text="{Binding Description}" />-->
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>
