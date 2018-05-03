@@ -1,0 +1,6 @@
+﻿{
+  "GPIOs1": [ "0 (None)", "1 (DHT11)", "2 (AM2301)", "3 (SI7021)", "4 (DS18x20)", "5 (I2C SCL)", "6 (I2C SDA)", "7 (WS2812)", "8 (IRsend)", "9 (Switch1)", "10 (Switch2)", "11 (Switch3)", "12 (Switch4)", "13 (Button1)", "14 (Button2)", "15 (Button3)", "16 (Button4)", "17 (Relay1)", "18 (Relay2)", "19 (Relay3)", "20 (Relay4)" ],
+  "GPIOs2": [ "21 (Relay5)", "22 (Relay6)", "23 (Relay7)", "24 (Relay8)", "25 (Relay1i)", "26 (Relay2i)", "27 (Relay3i)", "28 (Relay4i)", "29 (Relay5i)", "30 (Relay6i)", "31 (Relay7i)", "32 (Relay8i)", "33 (PWM1)", "34 (PWM2)", "35 (PWM3)", "36 (PWM4)", "37 (PWM5)", "38 (Counter1)", "39 (Counter2)", "40 (Counter3)", "41 (Counter4)" ],
+  "GPIOs3": [ "42 (PWM1i)", "43 (PWM2i)", "44 (PWM3i)", "45 (PWM4i)", "46 (PWM5i)", "47 (IRrecv)", "48 (Led1)", "49 (Led2)", "50 (Led3)", "51 (Led4)", "52 (Led1i)", "53 (Led2i)", "54 (Led3i)", "55 (Led4i)", "56 (MHZ Tx)", "57 (MHZ Rx)", "58 (PZEM Tx)", "59 (PZEM Rx)", "60 (SAir Tx)", "61 (SAir Rx)", "62 (SPI CS)", "63 (SPI DC)" ],
+  "GPIOs4": [ "64 (BkLight)", "65 (PMS5003)" ]
+}

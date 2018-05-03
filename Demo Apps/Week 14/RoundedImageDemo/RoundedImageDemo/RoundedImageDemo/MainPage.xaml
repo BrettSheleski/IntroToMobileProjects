@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RoundedImageDemo"
+             
+             x:Class="RoundedImageDemo.MainPage">
+
+    <local:RoundedImage Source="https://images-na.ssl-images-amazon.com/images/I/71isehx3SDL._SL1500_.jpg"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+</ContentPage>
