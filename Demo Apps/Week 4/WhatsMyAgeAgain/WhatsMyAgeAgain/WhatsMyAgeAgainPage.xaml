@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:WhatsMyAgeAgain" x:Class="WhatsMyAgeAgain.WhatsMyAgeAgainPage">
+    <StackLayout>
+        <Label Text="What's My Age Again?" FontSize="32" HorizontalTextAlignment="Center">
+            <Label.Margin>
+                <Thickness Top="15" />
+            </Label.Margin>
+        </Label>
+        <Label Text="Month" />
+        <Entry Keyboard="Numeric" x:Name="MonthEntry" />
+        <Label Text="Day" />
+        <Entry Keyboard="Numeric" x:Name="DayEntry" />
+        <Label Text="Year" />
+        <Entry Keyboard="Numeric" x:Name="YearEntry" />
+        <Button Text="Calculate" Clicked="Handle_Clicked" />
+        <Label Text="??" HorizontalTextAlignment="Center" FontSize="24" x:Name="AgeLabel" />
+    </StackLayout>
+</ContentPage>
