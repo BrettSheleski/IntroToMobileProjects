@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CountdownTimer" x:Class="CountdownTimer.CountdownTimerPage">
+    <StackLayout Margin="0, 25, 0, 0">
+        <Label Text="Death Clock" HorizontalTextAlignment="Center" />
+        <Entry HorizontalTextAlignment="Center" x:Name="SecondsToLiveEntry" Keyboard="Numeric" />
+        <Button Text="Start" Clicked="Handle_Clicked" />
+        <Label Text="You have" HorizontalTextAlignment="Center" />
+        <Label Text="XX.XX" HorizontalTextAlignment="Center" x:Name="RemainingTimeToLiveLabel"/>
+        <Label Text="seconds to live." HorizontalTextAlignment="Center" />
+        <Label Text="You're dead" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" TextColor="Red" IsVisible="false" x:Name="YoureDeadLabel" />
+    </StackLayout>
+</ContentPage>
