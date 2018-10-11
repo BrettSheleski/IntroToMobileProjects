@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PizzaOrder3000.ToppingsPage">
+    <StackLayout>
+        <Label Text="Choose your toppings" />
+        <StackLayout Orientation="Horizontal">
+            <Switch x:Name="PepperoniSwitch" Toggled="HandlePepperoni_Toggled" />
+            <Label Text="Pepperoni" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Switch x:Name="SausageSwitch" Toggled="HandleSausage_Toggled" />
+            <Label Text="Sausage" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Switch x:Name="MushroomSwitch" Toggled="HandleMushroom_Toggled" />
+            <Label Text="Mushroom" />
+        </StackLayout>
+        <Button Text="Next" Clicked="Handle_Clicked"/>
+    </StackLayout>
+</ContentPage>

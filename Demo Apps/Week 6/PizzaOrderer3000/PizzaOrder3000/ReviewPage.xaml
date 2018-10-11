@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PizzaOrder3000.ReviewPage">
+    <StackLayout>
+        <Label Text="Review Your order" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Pizza Size: " />
+            <Label Text="CHOSEN PIZZA SIZE HERE" x:Name="PizzaSizeLabel" />
+        </StackLayout>
+        <Label Text="Toppings" />
+        <StackLayout x:Name="ToppingsStackLayout">
+            <!-- Display the chosen pizza toppings here -->
+        </StackLayout>
+        <Label Text="Total" />
+        <Label Text="$$$$$" x:Name="TotalPriceLabel" />
+        <Button Text="Submit Order!!" Clicked="HandleSubmitButton_Clicked" />
+    </StackLayout>
+</ContentPage>
