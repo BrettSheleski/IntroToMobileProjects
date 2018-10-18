@@ -31,6 +31,14 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="TheGreatTemperatureConverterPage.xaml" />
+    <EmbeddedResource Include="TheFirstPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheSecondPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -41,6 +49,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TemperatureConverter.cs" />
+    <Compile Include="TheFirstPage.xaml.cs">
+      <DependentUpon>TheFirstPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheSecondPage.xaml.cs">
+      <DependentUpon>TheSecondPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.CarouselView">

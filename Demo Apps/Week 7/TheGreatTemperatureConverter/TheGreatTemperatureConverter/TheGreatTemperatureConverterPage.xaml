@@ -21,8 +21,24 @@
                 <cv:CarouselView.ItemTemplate>
                     <DataTemplate>
                         <ContentView>
-                            <Label Text="{Binding Title}" />
-
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Text="{Binding Title}" />
+                                <Entry Grid.Row="1" Text="{Binding Input}" Keyboard="Numeric" />
+                                <Label Grid.Row="2" Text="{Binding Output}" />
+                                <StackLayout Grid.Row="3" Orientation="Horizontal">
+                                    <Label Text="I just converted:" />
+                                    <Label Text="{Binding Input}" />
+                                    <Label Text=" to " />
+                                    <Label Text="{Binding Output}" />
+                                </StackLayout>
+                            </Grid>
                         </ContentView>
                     </DataTemplate>
                 </cv:CarouselView.ItemTemplate>
