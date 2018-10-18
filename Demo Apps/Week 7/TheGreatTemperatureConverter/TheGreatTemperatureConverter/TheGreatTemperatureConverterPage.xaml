@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TheGreatTemperatureConverter" x:Class="TheGreatTemperatureConverter.TheGreatTemperatureConverterPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="myTemplate">
+                <ContentView>
+                    <Label Text="This is an item!" />
+                </ContentView>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="The Great Temperature Converter 3000" Margin="0, 10, 0, 0" FontSize="20" FontAttributes="Bold" />
+            <cv:CarouselView Grid.Row="1" x:Name="TheCarousel">
+                <cv:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <Label Text="{Binding Title}" />
+
+                        </ContentView>
+                    </DataTemplate>
+                </cv:CarouselView.ItemTemplate>
+            </cv:CarouselView>
+            <Label Grid.Row="2" Text="This is the footer" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
