@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:myConverters="clr-namespace:ColorThingy.Converters"
+             xmlns:models="clr-namespace:ColorThingy.Models"
+             xmlns:local="clr-namespace:ColorThingy"
+             x:Class="ColorThingy.MainPage"
+             BindingContext="{StaticResource vm}"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <myConverters:ColorToTextConverter x:Key="brodyRocks" />
+            <models:ColorPickerViewModel x:Key="vm" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Red" HorizontalTextAlignment="End" />
+            <Slider Grid.Row="0" Grid.Column="1" Minimum="0" Maximum="255" Value="{Binding Red}" />
+            <Entry Grid.Row="0" Grid.Column="2" Keyboard="Numeric" Text="{Binding Red}" IsEnabled="False"  />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Green" HorizontalTextAlignment="End" />
+            <Slider Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="255" Value="{Binding Green}" />
+            <Entry Grid.Row="1" Grid.Column="2" Keyboard="Numeric" Text="{Binding Green}" IsEnabled="False" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Blue" HorizontalTextAlignment="End" />
+            <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="255" Value="{Binding Blue}" />
+            <Entry Grid.Row="2" Grid.Column="2" Keyboard="Numeric" Text="{Binding Blue}" IsEnabled="False"  />
+
+            <BoxView Grid.Row="3" Grid.ColumnSpan="3" BackgroundColor="{Binding Color}"  />
+            <StackLayout Grid.Row="3" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" >
+                <Label BackgroundColor="White" TextColor="Black"  Text="{Binding Color, Converter={StaticResource brodyRocks}, Mode=OneWay}" />
+                <Button Text="Invert that!" Command="{Binding InvertColorCommand}" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
