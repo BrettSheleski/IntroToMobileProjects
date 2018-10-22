@@ -4,11 +4,33 @@
              xmlns:local="clr-namespace:WeatherHub.Xamarin"
              x:Class="WeatherHub.Xamarin.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition  />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="City" HorizontalTextAlignment="End" />
+        <Entry Grid.Row="0" Grid.Column="1" Text="{Binding Model.City}" />
+
+        <Label Grid.Row="1" Grid.Column="0" Text="State" HorizontalTextAlignment="End" />
+        <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Model.State}" />
+
+        <Label Grid.Row="2" Grid.Column="0" Text="Country" HorizontalTextAlignment="End" />
+        <Entry Grid.Row="2" Grid.Column="1" Text="{Binding Model.Country}" />
+
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Text="Get Weather!" Command="{Binding GetWeatherCommand}" />
+
+        <ActivityIndicator Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsRunning="{Binding IsRunning}" />
+        <Label Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Weather.Temperature.Amount}" />
+
+    </Grid>
 
 </ContentPage>

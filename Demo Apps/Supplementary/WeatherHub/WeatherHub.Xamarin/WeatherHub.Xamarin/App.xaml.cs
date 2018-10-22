@@ -11,7 +11,15 @@ namespace WeatherHub.Xamarin
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+            var mainPage = new MainPage();
+
+            IWeatherProvider provider = new WeatherHub.OpenWeatherMap.OpenWeatherMapProvider("b9c77fa53374b9861bc3f87d684feb3a");
+            var model = new WeatherHub.Models.ViewWeatherPageModel(provider);
+            var vm = new Models.ViewWeatherPageViewModel(model);
+
+            mainPage.BindingContext = vm;
+
+            MainPage = mainPage;
 		}
 
 		protected override void OnStart ()

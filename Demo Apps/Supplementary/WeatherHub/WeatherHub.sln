@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherHub", "WeatherHub\WeatherHub.csproj", "{FA5E4F0E-D248-4549-9DA9-46266900D4A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherHub", "WeatherHub\WeatherHub.csproj", "{FA5E4F0E-D248-4549-9DA9-46266900D4A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherHub.OpenWeatherMap", "WeatherHub.OpenWeatherMap\WeatherHub.OpenWeatherMap.csproj", "{0C0E3A5D-F0A9-4BFE-ABF6-C776FFA0ACA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherHub.OpenWeatherMap", "WeatherHub.OpenWeatherMap\WeatherHub.OpenWeatherMap.csproj", "{0C0E3A5D-F0A9-4BFE-ABF6-C776FFA0ACA4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherHub.OpenWeatherMap.Tests", "WeatherHub.OpenWeatherMap.Tests\WeatherHub.OpenWeatherMap.Tests.csproj", "{5238E96B-6C54-4C63-AE1A-16D609A3E879}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherHub.AccuWeather", "WeatherHub.AccuWeather\WeatherHub.AccuWeather.csproj", "{714C3810-A071-4608-84C6-CB9060C33331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherHub.AccuWeather", "WeatherHub.AccuWeather\WeatherHub.AccuWeather.csproj", "{714C3810-A071-4608-84C6-CB9060C33331}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherHub.AccuWeather.Tests", "WeatherHub.AccuWeather.Tests\WeatherHub.AccuWeather.Tests.csproj", "{52E857E7-7AA3-4FC2-BCC4-C8D8AB696E58}"
 EndProject
@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherHub.Xamarin.iOS", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherHub.Xamarin.UWP", "WeatherHub.Xamarin\WeatherHub.Xamarin.UWP\WeatherHub.Xamarin.UWP.csproj", "{B4DF6DDA-00CC-418D-BDD8-30C642506D0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherHub.Xamarin", "WeatherHub.Xamarin\WeatherHub.Xamarin\WeatherHub.Xamarin.csproj", "{E8672A38-36D0-414E-8FF6-AF6F2C4CF800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherHub.Xamarin", "WeatherHub.Xamarin\WeatherHub.Xamarin\WeatherHub.Xamarin.csproj", "{E8672A38-36D0-414E-8FF6-AF6F2C4CF800}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

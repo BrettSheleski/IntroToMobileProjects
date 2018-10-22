@@ -7,9 +7,7 @@ namespace TheGreatTemperatureConverter
     {
 
         public string Title { get; set; }
-
         private double _input, _output;
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName){
@@ -35,8 +33,7 @@ namespace TheGreatTemperatureConverter
         }
 
         public double Output { get { return _output; } }
-            
-
+        
         public Func<double, double> ConverterDelegate { get; set; }
 
     }
