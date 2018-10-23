@@ -14,13 +14,15 @@ namespace WeatherHub.OpenWeatherMap
 
         public string ApiKey { get; }
 
-        public async Task<WeatherResult> GetWeatherAsync(string city, string countryCode)
+        public async Task<WeatherResult> GetWeatherAsync(string city, string stateCode, string countryCode)
         {
             var forecast = new Forecast();
 
+            city = $"{city}, {stateCode}";
+
             var weather = await forecast.GetWeatherDataByCityNameAsync(ApiKey, city, countryCode);
 
-            WeatherResult result = weather.ToResult();
+            WeatherResult result = weather?.ToResult();
 
             return result;
         }

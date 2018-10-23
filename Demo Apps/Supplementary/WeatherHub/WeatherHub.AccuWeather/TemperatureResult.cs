@@ -14,9 +14,9 @@ namespace WeatherHub.AccuWeather
         public string MobileLink { get; set; }
         public string Link { get; set; }
 
-        internal WeatherResult ToWeatherResult(LocationResult location)
+        internal WeatherResult ToWeatherResult(LocationResult location, WindSpeed windSpeed)
         {
-            return new WeatherResult(new DegreesFahrenheit(this.Temperature.Value), new LatitudeLongitude(location.GeoPosition.Latitude, location.GeoPosition.Longitude));
+            return new WeatherResult(new DegreesFahrenheit(this.Temperature.Value), new LatitudeLongitude(location.GeoPosition.Latitude, location.GeoPosition.Longitude), windSpeed);
         }
     }
 }

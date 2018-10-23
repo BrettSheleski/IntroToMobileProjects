@@ -18,11 +18,21 @@ namespace WeatherHub.Xamarin.Models
             Model.Country = "us";
             Model.State = "WI";
 
-            this.GetWeatherCommand = new Command(UpdateWeather);
+            this.GetWeatherCommand = new Command(UpdateWeather, CanUpdateWeather);
+
+            this.Model.PropertyChanged += (o, e) =>
+            {
+                GetWeatherCommand.ChangeCanExecute();
+            };
+        }
+
+        private bool CanUpdateWeather()
+        {
+            return !string.IsNullOrWhiteSpace(Model.City) && !string.IsNullOrWhiteSpace(Model.State) && !string.IsNullOrWhiteSpace(Model.Country);
         }
 
         public ViewWeatherPageModel Model { get; }
-        public ICommand GetWeatherCommand { get; }
+        public Command GetWeatherCommand { get; }
 
         public WeatherResult Weather { get => _weather; private set { _weather = value; OnPropertyChanged(); } }
 

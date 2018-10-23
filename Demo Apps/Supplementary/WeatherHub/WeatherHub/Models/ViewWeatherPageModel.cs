@@ -22,7 +22,7 @@ namespace WeatherHub.Models
 
         public Task<WeatherResult> GetWeather()
         {
-            return _weatherProvider.GetWeatherAsync($"{City}, {State}", Country);
+            return _weatherProvider.GetWeatherAsync(City, State, Country);
         }
     }
 }

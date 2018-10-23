@@ -14,7 +14,7 @@ namespace WeatherHub.AccuWeather.Tests
         {
             AccuWeather.AccuWeatherWeatherProvider provider = new AccuWeatherWeatherProvider(API_KEY);
 
-            var result = await provider.GetWeatherAsync("appleton, WI", "us");
+            var result = await provider.GetWeatherAsync("appleton", "WI", "us");
 
 
             Assert.IsNotNull(result);

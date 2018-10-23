@@ -2,35 +2,57 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WeatherHub.Xamarin"
+             xmlns:converters="clr-namespace:WeatherHub.Xamarin.Converters"
              x:Class="WeatherHub.Xamarin.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TemperatureToDegreesFahrenheitConverter x:Key="tempToDegreesF" StringFormat="{}{0:N0}&#x00B0; F" />
+            <converters:BoolInverterConverter x:Key="inverter" />
+            <converters:StringFormatConverter x:Key="roundToNearestWholeNumber" Format="{}{0:N0}" />
+            <converters:WindSpeedToMphConverter x:Key="speedToMph" />
+            <converters:DegreesToCardinalDirectionConverter x:Key="toCardinalDirection" />
+            <converters:TemperatureToColorConverter x:Key="tempToColor" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition  />
+            </Grid.RowDefinitions>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition  />
-        </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="City" HorizontalTextAlignment="End" />
+            <Entry Grid.Row="0" Grid.Column="1" Text="{Binding Model.City}" />
 
-        <Label Grid.Row="0" Grid.Column="0" Text="City" HorizontalTextAlignment="End" />
-        <Entry Grid.Row="0" Grid.Column="1" Text="{Binding Model.City}" />
+            <Label Grid.Row="1" Grid.Column="0" Text="State" HorizontalTextAlignment="End" />
+            <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Model.State}" />
 
-        <Label Grid.Row="1" Grid.Column="0" Text="State" HorizontalTextAlignment="End" />
-        <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Model.State}" />
+            <Label Grid.Row="2" Grid.Column="0" Text="Country" HorizontalTextAlignment="End" />
+            <Entry Grid.Row="2" Grid.Column="1" Text="{Binding Model.Country}" />
 
-        <Label Grid.Row="2" Grid.Column="0" Text="Country" HorizontalTextAlignment="End" />
-        <Entry Grid.Row="2" Grid.Column="1" Text="{Binding Model.Country}" />
+            <Button Grid.Row="3" Grid.ColumnSpan="2" Text="Get Weather!" Command="{Binding GetWeatherCommand}" />
 
-        <Button Grid.Row="3" Grid.ColumnSpan="2" Text="Get Weather!" Command="{Binding GetWeatherCommand}" />
+        
+            <ActivityIndicator Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsRunning="{Binding IsRunning}" IsVisible="{Binding IsRunning}" />
+            <Grid Grid.Row="4" Grid.ColumnSpan="2" IsVisible="{Binding IsRunning, Converter={StaticResource inverter}}">
+                <BoxView BackgroundColor="{Binding Weather.Temperature, Converter={StaticResource tempToColor}}" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Start">
+                    <Label Text="{Binding Weather.WindSpeed.Speed, Converter={StaticResource speedToMph}}" FontSize="25" />
+                    <StackLayout>
+                        <Image Rotation="{Binding Weather.WindSpeed.Direction}" Source="arrow.png"  HeightRequest="50" />
+                        <Label Text="{Binding Weather.WindSpeed.Direction, Converter={StaticResource toCardinalDirection}}" FontSize="12" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </StackLayout>
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Weather.Temperature, Converter={StaticResource tempToDegreesF}}" FontSize="100" />
+            </Grid>
 
-        <ActivityIndicator Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsRunning="{Binding IsRunning}" />
-        <Label Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Weather.Temperature.Amount}" />
-
-    </Grid>
-
+        </Grid>
+    </ScrollView>
 </ContentPage>

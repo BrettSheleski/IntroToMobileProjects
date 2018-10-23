@@ -14,9 +14,9 @@ namespace WeatherHub.OpenWeatherMap.Tests
         {
             var provider = new OpenWeatherMapProvider(API_KEY);
 
-            string city = "appleton, wi", country = "us";
+            string city = "appleton", state = "wi", country = "us";
 
-            var weather = await provider.GetWeatherAsync(city, country);
+            var weather = await provider.GetWeatherAsync(city, state, country);
 
             Assert.IsNotNull(weather);
 

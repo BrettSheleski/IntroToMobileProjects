@@ -13,7 +13,9 @@ namespace WeatherHub.OpenWeatherMap.Extensions
 
             LatitudeLongitude location = new LatitudeLongitude(weatherData.coord.lat, weatherData.coord.lon);
 
-            WeatherResult result = new WeatherResult(kelvin, location);
+            WindSpeed windSpeed = new WindSpeed(new KilometersPerHour(weatherData.wind.speed), weatherData.wind.deg);
+
+            WeatherResult result = new WeatherResult(kelvin, location, windSpeed);
 
             return result;
         }

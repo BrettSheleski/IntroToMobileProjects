@@ -7,6 +7,6 @@ namespace WeatherHub
 {
     public interface IWeatherProvider
     {
-        Task<WeatherResult> GetWeatherAsync(string city, string countryCode);
+        Task<WeatherResult> GetWeatherAsync(string city, string stateCode, string countryCode);
     }
 }
