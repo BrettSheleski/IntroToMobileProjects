@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:myConverters="clr-namespace:ColorThingy.Converters"
@@ -18,7 +18,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="150" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -29,15 +29,15 @@
 
             <Label Grid.Row="0" Grid.Column="0" Text="Red" HorizontalTextAlignment="End" />
             <Slider Grid.Row="0" Grid.Column="1" Minimum="0" Maximum="255" Value="{Binding Red}" />
-            <Entry Grid.Row="0" Grid.Column="2" Keyboard="Numeric" Text="{Binding Red}" IsEnabled="False"  />
+            <Entry Grid.Row="0" Grid.Column="2" Keyboard="Numeric" Text="{Binding Red}" IsEnabled="True"  />
 
             <Label Grid.Row="1" Grid.Column="0" Text="Green" HorizontalTextAlignment="End" />
             <Slider Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="255" Value="{Binding Green}" />
-            <Entry Grid.Row="1" Grid.Column="2" Keyboard="Numeric" Text="{Binding Green}" IsEnabled="False" />
+            <Entry Grid.Row="1" Grid.Column="2" Keyboard="Numeric" Text="{Binding Green}" IsEnabled="True" />
 
             <Label Grid.Row="2" Grid.Column="0" Text="Blue" HorizontalTextAlignment="End" />
             <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="255" Value="{Binding Blue}" />
-            <Entry Grid.Row="2" Grid.Column="2" Keyboard="Numeric" Text="{Binding Blue}" IsEnabled="False"  />
+            <Entry Grid.Row="2" Grid.Column="2" Keyboard="Numeric" Text="{Binding Blue}" IsEnabled="True"  />
 
             <BoxView Grid.Row="3" Grid.ColumnSpan="3" BackgroundColor="{Binding Color}"  />
             <StackLayout Grid.Row="3" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" >
