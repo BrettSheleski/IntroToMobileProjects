@@ -20,9 +20,6 @@ namespace DemoAsyncAwait.WinForms
             this.SynchronizationContext = SynchronizationContext.Current;
         }
 
-        const string DOWNLOAD_URL_100MB = "http://ipv4.download.thinkbroadband.com/100MB.zip";
-        const string DOWNLOAD_URL_1GB = "http://ipv4.download.thinkbroadband.com/1GB.zip";
-
         private void StartDownloadButton_Click(object sender, EventArgs e)
         {
             MessageLabel.Text = "Downloading, please wait";
@@ -38,7 +35,7 @@ namespace DemoAsyncAwait.WinForms
 
             using (System.Net.WebClient webClient = new System.Net.WebClient())
             {
-                webClient.DownloadData(DOWNLOAD_URL_100MB);
+                webClient.DownloadData(Program.DOWNLOAD_URL_100MB);
             }
 
             //// System.InvalidOperationException: 'Cross-thread operation not valid: Control 'MessageLabel' accessed from a thread other than the thread it was created on.'
@@ -71,7 +68,7 @@ namespace DemoAsyncAwait.WinForms
         {
             using (System.Net.WebClient webClient = new System.Net.WebClient())
             {
-                webClient.DownloadData(DOWNLOAD_URL_100MB);
+                webClient.DownloadData(Program.DOWNLOAD_URL_100MB);
             }
 
             SynchronizationContext.Post(DownloadCompleted_File1, null);
@@ -89,7 +86,7 @@ namespace DemoAsyncAwait.WinForms
         {
             using (System.Net.WebClient webClient = new System.Net.WebClient())
             {
-                webClient.DownloadData(DOWNLOAD_URL_100MB);
+                webClient.DownloadData(Program.DOWNLOAD_URL_100MB);
             }
 
             SynchronizationContext.Post(DownloadCompleted_File2, null);
@@ -107,7 +104,7 @@ namespace DemoAsyncAwait.WinForms
         {
             using (System.Net.WebClient webClient = new System.Net.WebClient())
             {
-                webClient.DownloadData(DOWNLOAD_URL_100MB);
+                webClient.DownloadData(Program.DOWNLOAD_URL_100MB);
             }
 
             SynchronizationContext.Post(DownloadCompleted_File3, null);
@@ -147,7 +144,7 @@ namespace DemoAsyncAwait.WinForms
         {
             using (System.Net.WebClient webClient = new System.Net.WebClient())
             {
-                webClient.DownloadData(DOWNLOAD_URL_100MB);
+                webClient.DownloadData(Program.DOWNLOAD_URL_100MB);
             }
 
             --filesRemainingToDownload;
