@@ -31,11 +31,15 @@ namespace FamilyList
             base.OnAppearing();
         }
 
-        private void AddFamilyMemberButton_Clicked(object sender, EventArgs e)
+        private async void AddFamilyMemberButton_Clicked(object sender, EventArgs e)
         {
             var addPage = new AddFamilyMemberPage();
 
-            Navigation.PushAsync(addPage);
+            this.AddButton.IsEnabled = false;
+
+            await Navigation.PushAsync(addPage);
+
+            this.AddButton.IsEnabled = true;
         }
     }
 }
