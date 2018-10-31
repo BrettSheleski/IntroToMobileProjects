@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TheGreatTemperatureConverter" x:Class="TheGreatTemperatureConverter.TheGreatTemperatureConverterPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TheGreatTemperatureConverter" x:Class="TheGreatTemperatureConverter.TheGreatTemperatureConverterPage">
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="myTemplate">

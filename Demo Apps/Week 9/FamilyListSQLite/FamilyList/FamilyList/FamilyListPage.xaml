@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FamilyList"
+             Title="My Family"
+             x:Class="FamilyList.FamilyListPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:DateToAgeConverter x:Key="dateToAge" />
+            <local:StringFormatConverter x:Key="dateFormatter" Format="{}{0:D}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Text="Family Members" Grid.Row="0" HorizontalTextAlignment="Center" FontSize="Large" />
+        <ListView Grid.Row="1" x:Name="FamilyListView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Text="{Binding FullName}" FontSize="Large" FontAttributes="Bold" />
+                            <StackLayout Grid.Row="1" Orientation="Horizontal" >
+                                <Label Text="Birth Date: "/>
+                                <Label Text="{Binding BirthDate,Converter={StaticResource dateFormatter}}" />
+                                <Label Text="Age: " />
+                                <Label Text="{Binding BirthDate,Converter={StaticResource dateToAge}}" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="2" Text="Add Family Member" Clicked="AddFamilyMemberButton_Clicked" />
+    </Grid>
+</ContentPage>
