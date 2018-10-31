@@ -18,8 +18,6 @@ namespace DemoAsyncAwait
             InitializeComponent();
         }
 
-        const string DOWNLOAD_URL_100MB = "http://ipv4.download.thinkbroadband.com/100MB.zip";
-
         private void Button_Clicked(object sender, EventArgs e)
         {
 
@@ -27,7 +25,7 @@ namespace DemoAsyncAwait
 
             using (HttpClient client = new HttpClient())
             {
-                client.GetByteArrayAsync(DOWNLOAD_URL_100MB).Wait();
+                client.GetByteArrayAsync(App.DOWNLOAD_URL_100MB).Wait();
             }
 
 

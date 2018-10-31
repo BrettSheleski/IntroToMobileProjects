@@ -25,5 +25,7 @@ namespace DemoAsyncAwait
         {
             // Handle when your app resumes
         }
+
+        public const string DOWNLOAD_URL_100MB = "https://speed.hetzner.de/100MB.bin";
     }
 }
