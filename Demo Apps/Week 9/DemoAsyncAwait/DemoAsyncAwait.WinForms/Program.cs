@@ -20,5 +20,8 @@ namespace DemoAsyncAwait.WinForms
         }
 
         public static bool SimulateDownloads { get; } = false;
+
+        public const string DOWNLOAD_URL_100MB = "https://speed.hetzner.de/100MB.bin";
+        public const string DOWNLOAD_URL_1GB = "https://speed.hetzner.de/1GB.bin";
     }
 }

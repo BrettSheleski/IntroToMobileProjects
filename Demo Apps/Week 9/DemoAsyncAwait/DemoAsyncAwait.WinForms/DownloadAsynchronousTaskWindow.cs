@@ -18,8 +18,6 @@ namespace DemoAsyncAwait.WinForms
             InitializeComponent();
         }
 
-        const string DOWNLOAD_URL_100MB = "http://ipv4.download.thinkbroadband.com/100MB.zip";
-
         private async void StartDownloadButton_Click(object sender, EventArgs e)
         {
             MessageLabel.Text = "Downloading...";
@@ -27,7 +25,7 @@ namespace DemoAsyncAwait.WinForms
 
             using (var webclient = new WebClient())
             {
-                await webclient.DownloadDataTaskAsync(DOWNLOAD_URL_100MB);
+                await webclient.DownloadDataTaskAsync(Program.DOWNLOAD_URL_100MB);
             }
 
 
@@ -47,7 +45,7 @@ namespace DemoAsyncAwait.WinForms
                 MessageLabel.Text = $"Downloading file #{i + 1}";
                 using (var webclient = new WebClient())
                 {
-                    await webclient.DownloadDataTaskAsync(DOWNLOAD_URL_100MB);
+                    await webclient.DownloadDataTaskAsync(Program.DOWNLOAD_URL_100MB);
                 }
             }
 
@@ -80,7 +78,7 @@ namespace DemoAsyncAwait.WinForms
         {
             using (var webclient = new WebClient())
             {
-                await webclient.DownloadDataTaskAsync(DOWNLOAD_URL_100MB);
+                await webclient.DownloadDataTaskAsync(Program.DOWNLOAD_URL_100MB);
             }
         }
     }
