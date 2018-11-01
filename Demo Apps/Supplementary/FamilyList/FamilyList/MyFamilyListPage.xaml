@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="My Family List" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:FamilyList"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FamilyList.MyFamilyListPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:DatetimeToAgeConverter x:Key="dateToAge" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="Here's my family!" />
+        <ListView Grid.Row="1" x:Name="FamilyListView" HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <StackLayout Orientation="Horizontal" Grid.Row="0">
+                                <Label Text="{Binding FirstName}" FontSize="Large"  />
+                                <Label Text="{Binding LastName}" FontSize="Large" />
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                <Label Text="Birth Date: "  />
+                                <Label Text="{Binding BirthDate, StringFormat='{0:d}'}" />
+                                <Label Text="Age: "  />
+                                <Label Text="{Binding BirthDate, Converter={StaticResource dateToAge}}" />
+                            </StackLayout>
+                                
+                        </Grid>
+                        </ViewCell>
+                        
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="2" Text="Add Family Member" Clicked="HandleAddButtonClick" x:Name="AddButton" />
+    </Grid>
+</ContentPage>
