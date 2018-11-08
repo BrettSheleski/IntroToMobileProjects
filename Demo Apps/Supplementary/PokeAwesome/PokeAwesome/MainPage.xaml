@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PokeAwesome" x:Class="PokeAwesome.MainPage">
+    
+        <Picker x:Name="PokemonPicker" HorizontalOptions="Center" ItemDisplayBinding="{Binding name}" VerticalOptions="Center" Title="Select a Pokemon, fool"  SelectedIndexChanged="Handle_SelectedIndexChanged" />
+        
+</ContentPage>
