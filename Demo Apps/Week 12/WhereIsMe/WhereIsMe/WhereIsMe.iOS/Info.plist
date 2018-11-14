@@ -34,5 +34,9 @@
 	<string>WhereIsMe</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Getting Your Location, Dude!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>I&apos;m following you...</string>
 </dict>
 </plist>
