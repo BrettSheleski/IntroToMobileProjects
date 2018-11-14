@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GamepadTester.GamepadPage">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label Text="Axes" />
+            <ListView Grid.Row="1" ItemsSource="{Binding Axes}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding Name}" Grid.Row="0" Grid.ColumnSpan="3" />
+
+                                <Label Text="{Binding Minimum}" Grid.Row="1" Grid.Column="0" />
+                                <Slider Grid.Column="1" Grid.Row="1" Minimum="{Binding Minimum}" Maximum="{Binding Maximum}" Value="{Binding Value}" />
+                                <Label Text="{Binding Maximum}" Grid.Row="1" Grid.Column="2" />
+                                
+                                <Label Text="{Binding Value}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Buttons" Grid.Row="2" />
+            <ListView Grid.Row="3" ItemsSource="{Binding Buttons}">
+                
+            </ListView>
+        </Grid>
+</ContentPage>
