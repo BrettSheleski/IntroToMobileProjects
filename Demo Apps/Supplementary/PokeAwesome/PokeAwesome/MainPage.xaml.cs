@@ -36,7 +36,7 @@ namespace PokeAwesome
             PokemonListResult pokemonListResult = Newtonsoft.Json.JsonConvert.DeserializeObject<PokemonListResult>(json);
 
             // set the picker's source to the list of pokemon
-            PokemonPicker.ItemsSource = pokemonListResult.results;
+            PokemonPicker.ItemsSource = pokemonListResult.results.OrderBy(x => x.name).ToList();
 
 
 
