@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PokeAwesome.PokedexPage">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Label Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0" Text="{Binding name}" />
+        <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" WidthRequest="100" Aspect="AspectFit" Source="{Binding sprites.front_default}" />
+        <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="0"  >
+            <Label Text="Height: "/>
+            <Label Text="{Binding height}" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1" >
+            <Label Text="Weight: "/>
+            <Label Text="{Binding weight}" />
+        </StackLayout>
+        
+        <ListView Grid.Row="2" Grid.ColumnSpan="3" ItemsSource="{Binding moves}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding move.name}" Detail="{Binding move.url}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+            
+        </ListView>
+    </Grid>
+    
+</ContentPage>
