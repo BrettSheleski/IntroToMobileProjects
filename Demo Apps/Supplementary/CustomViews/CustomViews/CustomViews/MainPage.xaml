@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomViews"
+             x:Class="CustomViews.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="200" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="200"  />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Entry Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Center" BindingContext="{x:Reference TheImage}" Text="{Binding TopLeftCornerRadius}" Keyboard="Numeric" />
+        <Slider Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="End" BindingContext="{x:Reference TheImage}" Value="{Binding TopLeftCornerRadius}" Minimum="0" Maximum="100" />
+
+        <Entry Grid.Row="0" Grid.Column="2" HorizontalOptions="Fill" VerticalOptions="Center" BindingContext="{x:Reference TheImage}" Text="{Binding TopRightCornerRadius}" Keyboard="Numeric" />
+        <Slider Grid.Row="0" Grid.Column="2" HorizontalOptions="Fill" VerticalOptions="End" BindingContext="{x:Reference TheImage}" Value="{Binding TopRightCornerRadius}" Minimum="0" Maximum="100" />
+        
+        <local:RoundedImage Source="https://www.telegraph.co.uk/content/dam/tv/2018/01/24/barney_trans_NvBQzQNjv4BqBmo3ZBPOSwC7GqRZsuXAwDqFnpLh5wjcaIDu-Ojf3tk.jpg?imwidth=1400"
+                            x:Name="TheImage"
+                            Grid.Row="1"
+                            Grid.Column="1" 
+                            TopLeftCornerRadius="10" 
+                            TopRightCornerRadius="20" 
+                            BottomLeftCornerRadius="30" 
+                            BottomRightCornerRadius="40">
+        </local:RoundedImage>
+
+        <Entry Grid.Row="2" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Center" BindingContext="{x:Reference TheImage}" Text="{Binding BottomLeftCornerRadius}" Keyboard="Numeric" />
+        <Slider Grid.Row="2" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Start" BindingContext="{x:Reference TheImage}" Value="{Binding BottomLeftCornerRadius}" Minimum="0" Maximum="100" />
+
+        
+        <Entry Grid.Row="2" Grid.Column="2" HorizontalOptions="Fill" VerticalOptions="Center" BindingContext="{x:Reference TheImage}" Text="{Binding BottomRightCornerRadius}" Keyboard="Numeric" />
+        <Slider Grid.Row="2" Grid.Column="2" HorizontalOptions="Fill" VerticalOptions="Start" BindingContext="{x:Reference TheImage}" Value="{Binding BottomRightCornerRadius}" Minimum="0" Maximum="100" />
+    </Grid>
+
+</ContentPage>
