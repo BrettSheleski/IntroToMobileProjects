@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SelfDestruct" x:Class="SelfDestruct.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Button x:Name="StartButton" Grid.Row="0" Text="Initiate Self Destruct" Clicked="StartButton_Clicked" />
+        <Label x:Name="CountdownLabel"  Grid.Row="1" HorizontalTextAlignment="Center" VerticalOptions="Center" FontSize="48" />
+        <Button x:Name="AbortButton" Grid.Row="2" Text="Abort!" Clicked="Abort_Clicked" />
+    </Grid>
+</ContentPage>
