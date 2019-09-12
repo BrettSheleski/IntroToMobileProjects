@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage Title="Batman!" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BatmanApp.BatmanPage">
+    <ContentPage Title="Batman Info">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="https://upload.wikimedia.org/wikipedia/en/8/87/Batman_DC_Comics.png" HeightRequest="150" Aspect="AspectFit" />
+            <Label Text="Batman" FontSize="35" HorizontalTextAlignment="Center" />
+            <Label Text="Batman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger,[1][2] and first appeared in Detective Comics #27 in 1939. Originally named the &quot;Bat-Man,&quot; the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective." />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Batman Enemies">
+        <StackLayout>
+            <Label Text="Enemies" />
+            <Label Text="Batman's main enemy is the Joker" />
+            <Button Text="More Information About Joker" Clicked="Handle_Clicked" />
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
