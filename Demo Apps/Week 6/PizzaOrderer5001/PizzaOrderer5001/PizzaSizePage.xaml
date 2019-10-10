@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Pizza Size"
+             IconImageSource="mushroom.png"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaOrderer5001.PizzaSizePage">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+        <Label Text="The Great Pizza Orderer 5000 (and one)"
+               FontSize="Title" />
+        <Image Source="pizza.jpg" />
+        <Label Text="Select your pizza size" />
+
+        <Button Text="Small" Clicked="HandleSmallButton_Clicked" />
+        <Button Text="Medium" Clicked="HandleMediumButton_Clicked" />
+        <Button Text="Large" Clicked="HandleLargeButton_Clicked" />
+
+
+    </StackLayout>
+
+</ContentPage>

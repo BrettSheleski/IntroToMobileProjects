@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaOrderer5001.SummaryPage"
+             Title="Summary"
+             IconImageSource="slice.png">
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label Text="Your pizza size:" />
+        <Label Text="PIZZA SIZE HERE" x:Name="PizzaSizeLabel" />
+
+        <Label Text="Selected Toppings:" />
+        <ListView x:Name="SelectedToppingsList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Cost, StringFormat='{0:c}'}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Text="Total Cost:" />
+        <Label Text="$XXXX" x:Name="TotalCostLabel" />
+
+        <Button Text="Place Order" Clicked="PlaceOrderButton_Clicked" />
+
+    </StackLayout>
+</ContentPage>

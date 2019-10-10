@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Toppings"
+             IconImageSource="pie.png"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaOrderer5001.ToppingsPage">
+
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Select some toppings!" FontSize="Title" />
+
+        <ListView x:Name="ToppingsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--
+                    <TextCell Text="{Binding Name}" Detail="{Binding Cost}" />
+                    -->
+                    <SwitchCell Text="{Binding Name}" On="{Binding IsSelected}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>
