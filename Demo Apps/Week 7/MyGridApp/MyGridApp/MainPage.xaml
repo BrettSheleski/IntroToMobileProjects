@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="MyGridApp.MainPage">
+    <Grid ColumnSpacing="0" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="6*" />
+        </Grid.ColumnDefinitions>
+
+
+        <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="Red" />
+        <BoxView Grid.Row="1" Grid.Column="1" BackgroundColor="White" />
+        <BoxView Grid.Row="2" Grid.Column="1" BackgroundColor="Red" />
+        <BoxView Grid.Row="3" Grid.Column="1" BackgroundColor="White" />
+        <BoxView Grid.Row="4" Grid.Column="1" BackgroundColor="Red" />
+        <BoxView Grid.Row="5" Grid.Column="1" BackgroundColor="White" />
+        <BoxView Grid.Row="6" Grid.Column="1" BackgroundColor="Red" />
+        <BoxView Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="White" />
+        <BoxView Grid.Row="8" Grid.ColumnSpan="2" BackgroundColor="Red" />
+        <BoxView Grid.Row="9" Grid.ColumnSpan="2" BackgroundColor="White" />
+        <BoxView Grid.Row="10" Grid.ColumnSpan="2" BackgroundColor="Red" />
+        <BoxView Grid.Row="11" Grid.ColumnSpan="2" BackgroundColor="White" />
+        <BoxView Grid.Row="12"  Grid.ColumnSpan="2" BackgroundColor="Red" />
+        
+        
+        <BoxView Grid.Row="0" Grid.RowSpan="7" BackgroundColor="Blue" />
+
+    </Grid>
+</ContentPage>
