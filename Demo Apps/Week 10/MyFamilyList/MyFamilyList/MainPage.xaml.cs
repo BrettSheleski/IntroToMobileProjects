@@ -13,16 +13,26 @@ namespace MyFamilyList
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        MainPageViewModel viewModel;
+
+
         public MainPage()
         {
             InitializeComponent();
 
-            MainPageViewModel viewModel = new MainPageViewModel();
+            viewModel = new MainPageViewModel();
 
             this.BindingContext = viewModel;
 
             viewModel.Navigation = this.Navigation;
 
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            viewModel.UpdateFamilyMembers();
         }
     }
 }

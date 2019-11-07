@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace MyFamilyList
@@ -8,42 +9,23 @@ namespace MyFamilyList
     {
         public MainPageViewModel()
         {
+            this.PersonRepository = new PersonRepository();
+
             AddCommand = new Command(Add);
 
-            FamilyMembers.Add(new Person
-            {
-                FirstName = "Brett",
-                LastName = "Awesomeski",
-                BirthDate = new DateTime(1984, 2, 12)
-            });
+
+            UpdateFamilyMembers();
 
 
-            FamilyMembers.Add(new Person
-            {
-                FirstName = "Sarah",
-                LastName = "Sheleski",
-                BirthDate = new DateTime(1980, 5, 6)
-            });
 
-            FamilyMembers.Add(new Person
-            {
-                FirstName = "Steven",
-                LastName = "Sheleski",
-                BirthDate = new DateTime(2016, 2, 14)
-            });
-
-            FamilyMembers.Add(new Person
-            {
-                FirstName = "Gaby",
-                LastName = "Dilley",
-                BirthDate = new DateTime(2008, 1, 11)
-            });
         }
 
 
-        public List<Person> FamilyMembers { get; } = new List<Person>();
+        public PersonRepository PersonRepository { get; }
 
-        public Command AddCommand { get; } 
+        public ObservableCollection<Person> FamilyMembers { get; } = new ObservableCollection<Person>< Person > ();
+
+        public Command AddCommand { get; }
 
         public Xamarin.Forms.INavigation Navigation { get; set; }
 
@@ -62,6 +44,16 @@ namespace MyFamilyList
 
 
             // do something here!
+        }
+
+        public void UpdateFamilyMembers()
+        {
+            this.FamilyMembers.Clear();
+
+            foreach (var person in this.PersonRepository.GetAllPeople())
+            {
+                this.FamilyMembers.Add(person);
+            }
         }
 
     }
