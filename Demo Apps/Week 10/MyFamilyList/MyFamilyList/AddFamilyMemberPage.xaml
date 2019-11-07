@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyFamilyList.AddFamilyMemberPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:local="clr-namespace:MyFamilyList"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyFamilyList.AddFamilyMemberPage">
+
+<ContentPage.BindingContext>
+    <local:AddFamilyMemberViewModel/>
+</ContentPage.BindingContext>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -13,15 +21,15 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Text="First Name" />
-        <Entry Grid.Row="1" />
+        <Entry Grid.Row="1" Text="{Binding FamilyMember.FirstName}" />
 
         <Label Grid.Row="2" Text="Last Name" />
-        <Entry Grid.Row="3" />
+        <Entry Grid.Row="3" Text="{Binding FamilyMember.LastName}" />
 
         <Label Grid.Row="4" Text="Birth Date" />
-        <DatePicker Grid.Row="5" />
+        <DatePicker Grid.Row="5" Date="{Binding FamilyMember.BirthDate}" />
 
 
-        <Button Grid.Row="7" Text="Save" />
+        <Button Grid.Row="7" Text="Save" Command="{Binding SaveCommand}" />
     </Grid>
 </ContentPage>

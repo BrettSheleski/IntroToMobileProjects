@@ -51,6 +51,13 @@ namespace MyFamilyList
         {
             AddFamilyMemberPage page = new AddFamilyMemberPage();
 
+            AddFamilyMemberViewModel viewModel = new AddFamilyMemberViewModel();
+
+            viewModel.Navigation = this.Navigation;
+
+
+            page.BindingContext = viewModel;
+
             Navigation.PushAsync(page);
 
 
