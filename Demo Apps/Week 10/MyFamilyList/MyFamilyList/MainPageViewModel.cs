@@ -23,7 +23,7 @@ namespace MyFamilyList
 
         public PersonRepository PersonRepository { get; }
 
-        public ObservableCollection<Person> FamilyMembers { get; } = new ObservableCollection<Person>< Person > ();
+        public ObservableCollection<Person> FamilyMembers { get; } = new ObservableCollection<Person>();
 
         public Command AddCommand { get; }
 
