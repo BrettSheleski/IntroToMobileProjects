@@ -13,16 +13,5 @@ namespace MyFamilyList
 
         public DbSet<Person> People { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-
-            modelBuilder.Entity<Person>()
-                .ToTable("person")
-                .Property(p => p.FirstName)
-                .HasColumnName("first_name");
-
-        }
     }
 }

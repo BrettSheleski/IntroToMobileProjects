@@ -53,7 +53,5 @@ namespace MyFamilyList
             return allPeople;
         }
         
-
-
     }
 }
