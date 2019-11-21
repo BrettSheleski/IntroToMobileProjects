@@ -6,29 +6,29 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MarathonApp
+namespace MyMarathonLister
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        public MainPageViewModel ViewModel { get; }
+        private MainPageViewModel viewModel;
 
         public MainPage()
         {
             InitializeComponent();
 
-            this.ViewModel = new MainPageViewModel(this.Navigation);
+            viewModel =  new MainPageViewModel(this.Navigation);
 
-            this.BindingContext = ViewModel;
+            this.BindingContext = viewModel;
         }
 
-        protected override async void OnBindingContextChanged()
+        protected override void OnAppearing()
         {
-            base.OnBindingContextChanged();
+            base.OnAppearing();
 
-            await ViewModel.GetMarathonsAsync();
+            viewModel.GetRaces();
         }
     }
 }

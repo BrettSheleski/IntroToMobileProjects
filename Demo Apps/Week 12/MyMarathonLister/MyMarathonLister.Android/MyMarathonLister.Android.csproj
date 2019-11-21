@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A178775-9E21-4E84-9438-822BBBB463F6}</ProjectGuid>
+    <ProjectGuid>{8E690657-A2F9-448B-AB52-750FFB4BD62B}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>MarathonApp.Droid</RootNamespace>
-    <AssemblyName>MarathonApp.Android</AssemblyName>
+    <RootNamespace>MyMarathonLister.Droid</RootNamespace>
+    <AssemblyName>MyMarathonLister.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -88,9 +88,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MarathonApp\MarathonApp.csproj">
-      <Project>{8D8F1A11-3E77-4490-B75E-F5408B4622D0}</Project>
-      <Name>MarathonApp</Name>
+    <ProjectReference Include="..\MyMarathonLister\MyMarathonLister.csproj">
+      <Project>{3ED365C2-EE17-4CB7-B86F-524A26084C1A}</Project>
+      <Name>MyMarathonLister</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

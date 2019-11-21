@@ -42,9 +42,9 @@ namespace MarathonApp
             foreach (var race in result.races)
             {
                 Races.Add(new RaceViewModel(this.Navigation, race));
-
-                await Task.Delay(100);
             }
+
+            await Task.Delay(100);
 
             IsGettingMarathons = false;
         }
