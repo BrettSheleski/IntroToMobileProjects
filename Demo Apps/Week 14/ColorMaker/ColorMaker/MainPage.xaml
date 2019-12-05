@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage BackgroundColor="{Binding Color}" xmlns:local="clr-namespace:ColorMaker" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ColorMaker.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel Color="DarkSlateBlue" />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:PercentTo255Converter x:Key="percentTo255" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+
+
+
+        <Grid Grid.ColumnSpan="3" x:Name="RGBGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Red" />
+            <Slider Grid.Row="0" Grid.Column="1" Minimum="0" Maximum="1" Value="{Binding Red}"  />
+            <Entry Grid.Row="0" Grid.Column="2">
+                <Entry.Text>
+                    <Binding Path="Red">
+                        <Binding.Converter>
+                            <local:PercentTo255Converter />
+                        </Binding.Converter>
+                    </Binding>
+                </Entry.Text>
+            </Entry>
+
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Blue" />
+            <Slider Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="1" Value="{Binding Blue}"  />
+            <Entry Grid.Row="1" Grid.Column="2" Text="{Binding Blue, Converter={StaticResource percentTo255}}" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Green" />
+            <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="1" Value="{Binding Green}" />
+            <Entry Grid.Row="2" Grid.Column="2" Text="{Binding Green, Converter={StaticResource percentTo255}}" />
+
+
+
+
+        </Grid>
+
+
+        <Grid Grid.ColumnSpan="3" x:Name="HSLGrid" IsVisible="false">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Hue" />
+            <Slider Grid.Row="0" Grid.Column="1" Minimum="0" Maximum="1" Value="{Binding Hue}"  />
+            <Entry Grid.Row="0" Grid.Column="2" Text="{Binding Hue, Converter={StaticResource percentTo255}}" />
+
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Saturation" />
+            <Slider Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="1" Value="{Binding Saturation}"  />
+            <Entry Grid.Row="1" Grid.Column="2" Text="{Binding Saturation}" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Luminosity" />
+            <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="1" Value="{Binding Luminosity}" />
+            <Entry Grid.Row="2" Grid.Column="2" Text="{Binding Luminosity}" />
+
+
+
+
+        </Grid>
+
+        <Button Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" Text="Toggle RGB/HSL" Clicked="HandleButton_Click" />
+
+        <Label Grid.Row="2" Grid.Column="0" Text="Alpha" />
+        <Slider Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="1" Value="{Binding Alpha}" />
+        <Entry Grid.Row="2" Grid.Column="2"  Text="{Binding Alpha}" />
+
+    </Grid>
+</ContentPage>
